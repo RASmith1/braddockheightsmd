@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Color palette for site   */
+/*  Burnt Orange:   #c95516 */
+/*  Warm Teal:      #3eb49f */
+/*  Pea Green:      #c2c76e */
+/*  Warm Gray       #948e8e */ 
+/*  Dark Choc       #582f2f */
+/*  Medium Choc     #684343 */
+/*  Lighter Choc    #795858 */
+/*  Lightest Choc   #896d6d */
+/*  Camo Green      #6d8455 */
+/*  Dark Brown      #3b231c */
+/*  Warm Orange     #c74205 */
+/*  DarkWarm Orange #b43318 */
+/*  Dark Scarlet    #aa1503 */
+/*  Warm Scarlet    #d83000 */
+/*  Dark Pea Green  #a5a724 */ 
+/*  Muted Mauve     #bd7d7d */
+/*  Milk Chocolate  #ca8568 */
+/*  Dark Milk Choc  #ba6348 */
+/*  Tan-Flesh       #e3b58a */
+/*  Warm Cream      #f1e8ca */
+/*  Smoky Blue      #bbcbdb */
+/*  Sage Green      #9ebd9e */
+/*  Antique Tan     #c4ac7c */
+/*  Sepia-like      #f0dda4 */
+
+#googleMap { height: 100% }
+
+//      var myCenter = new google.maps.LatLng(51.508742, -0.120850);
+    var myCenter = new google.maps.LatLng(39.4208, -77.5050);
+
+        function initialize() {
+            var mapProp = {
+                center: myCenter,
+                zoom: 5,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+        
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+            var marker = new google.maps.Marker({
+                position: myCenter,
+            });
+
+            marker.setMap(map);
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+#googleMap {
+    width: 100%;
+    height: 100%;
+}
